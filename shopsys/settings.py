@@ -15,6 +15,9 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+#自定义settings_dir 的文件目录
+SETTINGS_DIR = os.path.dirname(__file__)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'shopsys.apps.catalog',    #添加apps的catalog
 ]
 
 MIDDLEWARE = [
@@ -54,7 +58,9 @@ ROOT_URLCONF = 'shopsys.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        #自定义stating文件目录
+        'DIRS': [os.path.join(SETTINGS_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,3 +130,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICfILES_DIRS = (
+    os.path.join(SETTINGS_DIR,'static')
+)
