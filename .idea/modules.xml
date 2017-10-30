@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Jd/.idea/Jd.iml" filepath="$PROJECT_DIR$/../Jd/.idea/Jd.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/shopsys.iml" filepath="$PROJECT_DIR$/.idea/shopsys.iml" />
     </modules>
   </component>
